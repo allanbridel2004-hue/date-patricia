@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Choix du lieu ❤️</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>🥹 Merci Patricia ❤️</h1>
+
+<p>Où veux-tu qu'on aille ?</p>
+
+<button onclick="choisir('🍿 Cinéma')">🍿 Cinéma</button><br><br>
+
+<button onclick="choisir('🍕 Restaurant')">🍕 Restaurant</button><br><br>
+
+<button onclick="choisir('☕ Café')">☕ Café</button><br><br>
+
+<button onclick="choisir('🌳 Parc')">🌳 Parc</button><br><br>
+
+<button onclick="choisir('🎳 Bowling')">🎳 Bowling</button><br><br>
+
+<button onclick="choisir('✨ Autre chose')">✨ Autre chose</button>
+
+</div>
+
+<script>
+
+function choisir(lieu){
+
+localStorage.setItem("lieu",lieu);
+
+window.location.href="day.html";
+
+}
+
+</script>
+
+</body>
+</html>
