@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Choix du jour</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>📅 Quel jour te convient ?</h1>
+
+<button onclick="jour('Samedi 16h à 19h')">
+Samedi
+<br>
+16h à 19h
+</button>
+
+<br><br>
+
+<button onclick="jour('Dimanche 14h à 19h')">
+Dimanche
+<br>
+14h à 19h
+</button>
+
+</div>
+
+<script>
+
+function jour(j){
+
+localStorage.setItem("jour",j);
+
+window.location.href="message.html";
+
+}
+
+</script>
+
+</body>
+
+</html>
