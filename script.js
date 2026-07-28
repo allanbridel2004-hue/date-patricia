@@ -16,6 +16,6 @@ noBtn.style.top=y+"px";
 
 document.getElementById("yesBtn").addEventListener("click",()=>{
 
-alert("❤️ Merci Patricia ❤️");
+window.location.href="choice.html";
 
 });
