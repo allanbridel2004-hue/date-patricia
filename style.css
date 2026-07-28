@@ -1,37 +1,135 @@
-body{
-
+*{
 margin:0;
 padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
+}
+
+body{
+
+height:100vh;
 
 display:flex;
 
 justify-content:center;
+
 align-items:center;
 
-height:100vh;
-
-background:linear-gradient(135deg,#ff9a9e,#fad0c4);
-
-font-family:Arial,sans-serif;
-
 overflow:hidden;
+
+background:#050816;
+
+color:white;
+
+}
+
+/* Ciel étoilé */
+
+body::before{
+
+content:"";
+
+position:fixed;
+
+width:100%;
+
+height:100%;
+
+background-image:
+
+radial-gradient(white 1px, transparent 1px),
+
+radial-gradient(#8ec5ff 1px, transparent 1px),
+
+radial-gradient(#ffffff 2px, transparent 2px);
+
+background-size:
+
+120px 120px,
+
+220px 220px,
+
+350px 350px;
+
+animation:stars 90s linear infinite;
+
+opacity:.8;
+
+z-index:-2;
+
+}
+
+@keyframes stars{
+
+from{
+
+transform:translateY(0);
+
+}
+
+to{
+
+transform:translateY(-300px);
+
+}
 
 }
 
 .container{
 
-background:white;
+width:90%;
 
-padding:30px;
+max-width:500px;
+
+padding:35px;
+
+background:rgba(255,255,255,.08);
+
+backdrop-filter:blur(18px);
 
 border-radius:25px;
 
+border:1px solid rgba(255,255,255,.15);
+
 text-align:center;
 
-width:90%;
-max-width:450px;
+box-shadow:0 0 40px rgba(255,255,255,.08);
 
-box-shadow:0 10px 30px rgba(0,0,0,.2);
+animation:fade .8s;
+
+}
+
+@keyframes fade{
+
+from{
+
+opacity:0;
+
+transform:translateY(30px);
+
+}
+
+to{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+}
+
+h1{
+
+margin-bottom:20px;
+
+}
+
+p{
+
+margin:15px;
+
+line-height:1.7;
 
 }
 
@@ -39,13 +137,17 @@ button{
 
 padding:15px 35px;
 
-margin:15px;
+margin:10px;
 
 border:none;
 
-border-radius:50px;
+border-radius:40px;
 
-font-size:20px;
+background:#4ea1ff;
+
+color:white;
+
+font-size:18px;
 
 cursor:pointer;
 
@@ -53,26 +155,24 @@ transition:.3s;
 
 }
 
-#yesBtn{
+button:hover{
 
-background:#ff4081;
+transform:scale(1.08);
 
-color:white;
-
-}
-
-#yesBtn:hover{
-
-transform:scale(1.1);
+background:#6fb8ff;
 
 }
 
-#noBtn{
+textarea{
 
-background:#555;
+background:rgba(255,255,255,.12);
 
 color:white;
 
-position:relative;
+border:none;
+
+outline:none;
+
+border-radius:15px;
 
 }
