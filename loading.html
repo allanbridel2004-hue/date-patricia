@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Connexion...</title>
+
+<link rel="stylesheet" href="style.css">
+
+<style>
+
+.progress{
+
+width:100%;
+
+height:20px;
+
+background:rgba(255,255,255,.15);
+
+border-radius:50px;
+
+overflow:hidden;
+
+margin-top:30px;
+
+}
+
+.bar{
+
+height:100%;
+
+width:0%;
+
+background:#4ea1ff;
+
+transition:.5s;
+
+}
+
+#percent{
+
+margin-top:20px;
+
+font-size:22px;
+
+font-weight:bold;
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>❤️ Connexion au cœur de Patricia...</h1>
+
+<div class="progress">
+
+<div class="bar" id="bar"></div>
+
+</div>
+
+<p id="percent">0%</p>
+
+<p id="status">Initialisation...</p>
+
+</div>
+
+<script>
+
+const bar=document.getElementById("bar");
+
+const percent=document.getElementById("percent");
+
+const status=document.getElementById("status");
+
+let value=0;
+
+const textes=[
+
+"Analyse des émotions...",
+
+"Recherche des souvenirs...",
+
+"Lecture du cœur...",
+
+"Connexion établie ❤️"
+
+];
+
+const timer=setInterval(()=>{
+
+value+=2;
+
+bar.style.width=value+"%";
+
+percent.innerHTML=value+"%";
+
+if(value==25){
+
+status.innerHTML=textes[0];
+
+}
+
+if(value==50){
+
+status.innerHTML=textes[1];
+
+}
+
+if(value==75){
+
+status.innerHTML=textes[2];
+
+}
+
+if(value>=100){
+
+clearInterval(timer);
+
+status.innerHTML=textes[3];
+
+setTimeout(()=>{
+
+window.location.href="finish.html";
+
+},1800);
+
+}
+
+},80);
+
+</script>
+
+</body>
+
+</html>
