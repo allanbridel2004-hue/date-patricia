@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Petit mot</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>💌 Un petit mot pour moi ?</h1>
+
+<textarea
+id="message"
+rows="6"
+style="width:100%;padding:15px;border-radius:15px;"></textarea>
+
+<br><br>
+
+<button onclick="envoyer()">
+
+❤️ Continuer
+
+</button>
+
+</div>
+
+<script>
+
+function envoyer(){
+
+localStorage.setItem(
+
+"message",
+
+document.getElementById("message").value
+
+);
+
+window.location.href="lastquestion.html";
+
+}
+
+</script>
+
+</body>
+
+</html>
