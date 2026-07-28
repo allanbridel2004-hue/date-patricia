@@ -16,6 +16,12 @@ noBtn.style.top=y+"px";
 
 document.getElementById("yesBtn").addEventListener("click",()=>{
 
+document.body.style.opacity="0";
+
+setTimeout(()=>{
+
 window.location.href="choice.html";
+
+},800);
 
 });
