@@ -40,6 +40,28 @@ window.location.href="day.html";
 }
 
 </script>
+<audio id="musique" loop>
+  <source src="musique.mp3" type="audio/mpeg">
+</audio>
 
+<script>
+const audio = document.getElementById("musique");
+
+// Reprendre la musique si elle était déjà lancée
+if (localStorage.getItem("musique") === "on") {
+  audio.play().catch(() => {});
+}
+
+// Lancer la musique au premier clic
+document.addEventListener("click", () => {
+  audio.play();
+  localStorage.setItem("musique", "on");
+}, { once: true });
+
+function choisir(lieu){
+  localStorage.setItem("lieu", lieu);
+  window.location.href = "day.html";
+}
+</script>
 </body>
 </html>
