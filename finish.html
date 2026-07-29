@@ -35,6 +35,33 @@ J'ai vraiment hâte de passer ce moment avec toi Miss G.
 </div>
 
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script>
+const supabase = window.supabase.createClient(
+  "https://evwuxpkheshwexufybkz.supabase.co",
+  "TA_CLE_PUBLISHABLE"
+);
+
+async function enregistrerReponse() {
+
+  const { error } = await supabase
+    .from("reponses")
+    .insert([{
+      lieu: localStorage.getItem("lieu"),
+      jour: localStorage.getItem("jour"),
+      message: localStorage.getItem("message"),
+      reponse: localStorage.getItem("reponse")
+    }]);
+
+  if (error) {
+    console.error(error);
+  } else {
+    console.log("Réponse enregistrée !");
+  }
+
+}
+
+enregistrerReponse();
+</script>
 </body>
 
 </html>
