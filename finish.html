@@ -52,11 +52,11 @@ async function enregistrerReponse() {
       reponse: localStorage.getItem("reponse")
     }]);
 
-  if (error) {
-    console.error(error);
-  } else {
-    console.log("Réponse enregistrée !");
-  }
+if (error) {
+  alert("Erreur : " + error.message);
+} else {
+ alert("Réponse enregistrée avec succès ❤️");
+}
 
 }
 
