@@ -53,9 +53,12 @@ async function enregistrerReponse() {
     }]);
 
 if (error) {
-  alert("Erreur : " + error.message);
+  alert(
+    "Erreur :\n" +
+    JSON.stringify(error, null, 2)
+  );
 } else {
- alert("Réponse enregistrée avec succès ❤️");
+  alert("✅ Réponse enregistrée !");
 }
 
 }
