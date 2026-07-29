@@ -53,10 +53,7 @@ async function enregistrerReponse() {
     }]);
 
 if (error) {
-  alert(
-    "Erreur :\n" +
-    JSON.stringify(error, null, 2)
-  );
+  alert("ERREUR : " + JSON.stringify(error));
 } else {
   alert("✅ Réponse enregistrée !");
 }
